@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/likkijay/heroku-example/issues"
   },
-  "homepage": "https://github.com/likkijay/heroku-example#readme"
+  "homepage": "https://github.com/likkijay/heroku-example#readme",
+  "engines": {
+    "node": "13.x"
+  }
 }

@@ -1,11 +1,11 @@
-const http = require('http');
+const https = require('https');
 
 
 const requestListener = function (req, res) {
   const date = Date();
   res.writeHead(200);
-  res.end(`<h1>${date}</h1>`);
+  res.end(`${date}`);
 };
 
-const server = http.createServer(requestListener);
-server.listen(3000);
+const server = https.createServer(requestListener);
+server.listen(process.env.PORT);
