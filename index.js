@@ -1,11 +1,13 @@
-const https = require('https');
+const express = require('express');
+const { response } = require('express');
 
 
-const requestListener = function (req, res) {
+const app = express();
+
+app.get('/', (request, response) => {
   const date = Date();
-  res.writeHead(200);
-  res.end(`${date}`);
-};
+  response.setHeader('Content-Type', 'text/plain');
+  response.send(`${date}`);
+});
 
-const server = https.createServer(requestListener);
-server.listen(process.env.PORT);
+app.listen(process.env.PORT, () => console.log('Server starte successfully'));

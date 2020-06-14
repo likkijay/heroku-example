@@ -19,5 +19,8 @@
   "homepage": "https://github.com/likkijay/heroku-example#readme",
   "engines": {
     "node": "13.x"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
